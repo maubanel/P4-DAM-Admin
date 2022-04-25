@@ -4,15 +4,16 @@
 
 <img src="https://via.placeholder.com/1000x4/45D7CA/45D7CA" alt="drawing" height="4px"/>
 
-
-
-Start-Up Procedure for Operator 1
+Tips for Perforce Admins
 
 <br>
 
 ---
 
 ## .p4ignore
+
+Place in root folder alongside `.uproject` project name.  Download a [copy here](.p4ignore).
+
 ```
 Saved/
 Intermediate/
@@ -30,8 +31,25 @@ FileOpenOrder/
 
 - Stop anyone from creating a new user by typing in command line: `p4 configure set dm.user.noautocreate=2`.  You should receive a response of _For server 'any', configuration variable 'dm.user.noautocreate' set to '2'_ if succesful.
 
+Not saving ini with version control
+```
+I had to change Saved/Config/Windows/SourceControlSettings.ini to this:
 
+[SourceControl.SourceControlSettings]
+UseGlobalSettings=True
 
+It was set to false prior. Once that was done, I loaded the editor, then set up source control again.
+
+[SourceControl.SourceControlSettings]
+UseGlobalSettings=True
+Provider=Perforce
+
+[PerforceSourceControl.PerforceSourceControlSettings]
+Port=[IP ADDRESS]:[PORT]
+UserName=[Username]
+Workspace=[Workspace]
+HostOverride=
+```
 
 <br><br>
 
