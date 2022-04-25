@@ -12,7 +12,7 @@ Tips for Perforce Admins
 
 ## .p4ignore
 
-Place in root folder alongside `.uproject` project name.  Download a [copy here](.p4ignore).
+Place in root folder alongside `.uproject` project name.  Right click and download a linked file [copy here](.p4ignore).
 
 ```
 Saved/
