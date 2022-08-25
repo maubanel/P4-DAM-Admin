@@ -53,6 +53,7 @@ HostOverride=
 
 <br><br>
 
-- Someone has accidentally checkout files and you need to revert another users files
+## Files Check Out by Depot
+Someone has accidentally checkout files and will not check them back in.  You can force them to revert with admin privileges.
 
 * `p4 revert -C WORKSPACENAME //DEPOTNAME/...`
