@@ -53,3 +53,6 @@ HostOverride=
 
 <br><br>
 
+- Someone has accidentally checkout files and you need to revert another users files
+
+* `p4 revert -C WORKSPACENAME //DEPOTNAME/...`
