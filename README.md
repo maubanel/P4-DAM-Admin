@@ -53,7 +53,13 @@ HostOverride=
 
 <br><br>
 
-## Files Check Out by Depot
+### Files Check Out by Depot
 Someone has accidentally checkout files and will not check them back in.  You can force them to revert with admin privileges.
 
 * `p4 revert -C WORKSPACENAME //DEPOTNAME/...`
+
+### Symptoms
+Project files are locked and no one has them checked out in Unreal.
+
+### Resolution
+Run `p4 retype -t binary //DEPOT/...`.  This will unlock **ALL** the files in the repo
