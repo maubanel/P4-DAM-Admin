@@ -67,4 +67,7 @@ Run `p4 retype -t binary //DEPOT/...`.  This will unlock **ALL** the files in th
 ### DAM
 * To limit DAM users from creating projects or repositories go to **Teams** dashboard and click on the user proflie on thg etop right.  Click on **Company settings**.  Go to **Features** and adjust the settings to limit projects.
 
+![companySettings](https://user-images.githubusercontent.com/5504953/195142528-d632a1b8-c01c-47a1-848f-857427d5819d.png)
+
+![restrictingAccess](https://user-images.githubusercontent.com/5504953/195142546-82713ce5-b5a6-4ce2-8d11-6519aeb30e10.png)
 
