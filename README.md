@@ -58,11 +58,17 @@ Someone has accidentally checkout files and will not check them back in.  You ca
 
 * `p4 revert -C WORKSPACENAME //DEPOTNAME/...`
 
-### Symptoms
-Project files are locked and no one has them checked out in Unreal.
-
-### Resolution
+### Project Files are Locked
+Occasionally project files are locked and no one has them checked out in Unreal.
 Run `p4 retype -t binary //DEPOT/...`.  This will unlock **ALL** the files in the repo
+
+### Ignored Files in Depot
+There are files/folders in the depot that should be ignored.
+
+Run `p4 obliterate //DEPOTNAME/FilePaths...` to test what files will be obliterated.  If the results are correct then type
+
+`p4 obliterate -y //DEPOTNAME/FilePaths...`
+
 
 ### DAM
 * To limit DAM users from creating projects or repositories go to **Teams** dashboard and click on the user proflie on thg etop right.  Click on **Company settings**.  Go to **Features** and adjust the settings to limit projects.
