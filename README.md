@@ -12,7 +12,7 @@ Tips for Perforce Admins
 
 ## .p4ignore
 
-Place in root folder alongside `.uproject` project name.  Right click and download a linked file [copy here](.p4ignore).
+Place in root folder alongside `.uproject` project name.  Right click and download a linked file [stored here](.p4ignore).
 
 ```
 Saved/
@@ -31,6 +31,9 @@ FileOpenOrder/
 
 - Stop anyone from creating a new user by typing in command line: `p4 configure set dm.user.noautocreate=2`.  You should receive a response of _For server 'any', configuration variable 'dm.user.noautocreate' set to '2'_ if succesful.
 
+
+
+# Issue regarding version control not loading by default
 Not saving ini with version control
 ```
 I had to change Saved/Config/Windows/SourceControlSettings.ini to this:
