@@ -12,7 +12,11 @@ Tips for Perforce Admins
 
 ## .p4ignore
 
+<<<<<<< HEAD
 Place in root folder alongside `.uproject` project name.  Right click and download a linked file [stored here](.p4ignore).
+=======
+Place in root folder alongside `.uproject` project name.  Right click and download a linked file [copy here](.p4ignore). Because the folders have no slash in front of them it is any folder names `Saved/` not just root of the `.p4ignore` file.
+>>>>>>> 3bac52a2aff4739049f3b96526bca6810992a17c
 
 ```
 Saved/
@@ -55,4 +59,28 @@ HostOverride=
 ```
 
 <br><br>
+
+### Files Check Out by Depot
+Someone has accidentally checkout files and will not check them back in.  You can force them to revert with admin privileges.
+
+* `p4 revert -C WORKSPACENAME //DEPOTNAME/...`
+
+### Project Files are Locked
+Occasionally project files are locked and no one has them checked out in Unreal.
+Run `p4 retype -t binary //DEPOT/...`.  This will unlock **ALL** the files in the repo
+
+### Ignored Files in Depot
+There are files/folders in the depot that should be ignored.
+
+Run `p4 obliterate //DEPOTNAME/FilePaths...` to test what files will be obliterated.  If the results are correct then type
+
+`p4 obliterate -y //DEPOTNAME/FilePaths...`
+
+
+### DAM
+* To limit DAM users from creating projects or repositories go to **Teams** dashboard and click on the user proflie on thg etop right.  Click on **Company settings**.  Go to **Features** and adjust the settings to limit projects.
+
+![companySettings](https://user-images.githubusercontent.com/5504953/195142528-d632a1b8-c01c-47a1-848f-857427d5819d.png)
+
+![restrictingAccess](https://user-images.githubusercontent.com/5504953/195142546-82713ce5-b5a6-4ce2-8d11-6519aeb30e10.png)
 
