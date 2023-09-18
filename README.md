@@ -72,7 +72,7 @@ Run `p4 obliterate //DEPOTNAME/FilePaths...` to test what files will be oblitera
 
 `p4 obliterate -y //DEPOTNAME/FilePaths...`
 
-### If typemap is messup, retype project by going to a root folder on a workspace and running
+### If typemap is wrong (.uasset should be binary+l), retype all the files in the project by going to a root folder on a workspace and running
 
 `p4 edit -t auto ...`
 
