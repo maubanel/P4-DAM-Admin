@@ -72,6 +72,12 @@ Run `p4 obliterate //DEPOTNAME/FilePaths...` to test what files will be oblitera
 
 `p4 obliterate -y //DEPOTNAME/FilePaths...`
 
+### If typemap is messup, retype project by going to a root folder on a workspace and running
+
+`p4 edit -t auto ...`
+
+Submit changes to the server.
+
 
 ### DAM
 * To limit DAM users from creating projects or repositories go to **Teams** dashboard and click on the user proflie on thg etop right.  Click on **Company settings**.  Go to **Features** and adjust the settings to limit projects.
