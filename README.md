@@ -78,6 +78,12 @@ Run `p4 obliterate //DEPOTNAME/FilePaths...` to test what files will be oblitera
 
 Submit changes to the server.
 
+### Creating New Branch
+
+Performs a copy and submit in one command when creating new streams.
+
+`p4 populate //PROJECT NAME/BRANCH_SOURCE/... //PROJECT_NAME/BRANCH_DESTINATION/...`
+
 
 ### DAM
 * To limit DAM users from creating projects or repositories go to **Teams** dashboard and click on the user proflie on thg etop right.  Click on **Company settings**.  Go to **Features** and adjust the settings to limit projects.
