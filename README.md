@@ -10,6 +10,10 @@ Tips for Perforce Admins
 
 ---
 
+## LSU Changes Hostname
+* It seems like that on Mac OSX the school is altering the result of HOSTNAME and make it look like a different computer when off the LSU network.  For example my mac hostname at home is: Marc’s MacBook Pro but at school my hostname is: 88-66-5a-0e-1c-d6.wlan.lsu.edu
+  
+
 ## .p4ignore
 
 Place in root folder above project directorty with `.uproject` project name.  Right click and download a linked file [copy here](.p4ignore). Because the folders have no slash in front of them it is any folder names `Saved/` not just root of the `.p4ignore` file.
