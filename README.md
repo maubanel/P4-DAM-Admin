@@ -91,6 +91,9 @@ Performs a copy and submit in one command when creating new streams.
 ### List All Checked Out Files
 `p4 opened -a //depot/Your/Location/...`
 
+### List all clients (Workspaces) on a stream:
+`clients -a -S //DeportName/Stream`
+
 
 ### DAM
 * To limit DAM users from creating projects or repositories go to **Teams** dashboard and click on the user proflie on thg etop right.  Click on **Company settings**.  Go to **Features** and adjust the settings to limit projects.
