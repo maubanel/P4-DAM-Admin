@@ -207,7 +207,7 @@ TypeMap:
 
 * Best to save as a text file (.txt only) then import it: `p4 typemap -i < my_typemap.txt`
 * To print and confirm it type `p4 typemap -o`
-* Bash Script to retype all files (make sure they are all commiteed)
+* Bash Script to retype all files on mac (make sure they are all commiteed)
 
 ```
   #!/bin/bash
