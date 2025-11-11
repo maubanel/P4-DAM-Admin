@@ -94,6 +94,118 @@ Performs a copy and submit in one command when creating new streams.
 ### List all clients (Workspaces) on a stream:
 `clients -a -S //DeportName/Stream`
 
+### Current P4 Typemap
+# Perforce File Type Mapping Specifications.
+#
+#  TypeMap:	a list of filetype mappings; one per line.
+#		Each line has two elements:
+#
+#  		Filetype: The filetype to use on 'p4 add'.
+#
+#  		Path:     File pattern which will use this filetype.
+#
+# See 'p4 help typemap' for more information.
+
+TypeMap:
+	text //....asp
+	text //....cnf
+	text //....css
+	text //....htm
+	text //....html
+	text //....inc
+	text //....js
+	text //....ini
+	text //....config
+	text //....cpp
+	text //....h
+	text //....c
+	text //....cs
+	text //....m
+	text //....mm
+	text //....py
+	text+w //....log
+	text+w //....pdm
+	text+w //....modules
+	text+l //....Unity
+	text+l //....prefab
+	text+l //....shadergraph
+	text+l //....asset
+	binary+FS2w //....zip
+	binary+Fl //....bz2
+	binary+Fl //....rar
+	binary+Fl //....gz
+	binary+Fl //....avi
+	binary+Fl //....jpg
+	binary+Fl //....jpeg
+	binary+Fl //....mpg
+	binary+Fl //....gif
+	binary+Fl //....tif
+	binary+Fl //....tga
+	binary+Fl //....hdr
+	binary+Fl //....ext
+	binary+Fl //....mov
+	binary+Fl //....jar
+	binary+Fl //....blend
+	binary+Fl //....fbx
+	binary+Fl //....obj
+	binary+Fl //....bmp
+	binary+Fl //....mb
+	binary+Fl //....m4a
+	binary+Fl //....mp4
+	binary+Fl //....aac
+	binary+Fl //....wav
+	binary+Fl //....wma
+	binary+Fl //....docx
+	binary+Fl //....pptx
+	binary+Fl //....xlsx
+	binary+Fl //....png
+	binary+Fl //....raw
+	binary+Fl //....psd
+	binary+Fl //....uasset
+	binary+Fl //....umap
+	binary+Fl //....upk
+	binary+Fl //....udk
+	binary+Fl //....ubulk
+	binary+l //....ico
+	binary+l //....anim
+	binary+l //....mtl
+	binary+l //....exp
+	binary+l //....btr
+	binary+l //....doc
+	binary+l //....dot
+	binary+l //....xls
+	binary+l //....ppt
+	binary+l //....pdf
+	binary+l //....tar
+	binary+l //....bin
+	binary+l //....class
+	binary+l //....war
+	binary+l //....ear
+	binary+l //....so
+	binary+l //....rpt
+	binary+l //....cfm
+	binary+l //....ma
+	binary+l //....pac
+	binary+l //....odt
+	binary+l //....ods
+	binary+l //....odg
+	binary+l //....odp
+	binary+l //....otg
+	binary+l //....ots
+	binary+l //....ott
+	binary+l //....sxw
+	binary+S2w //....exe
+	binary+S2w //....exp
+	binary+S2w //....dll
+	binary+S2w //....lib
+	binary+S2w //....app
+	binary+S2w //....dylib
+	binary+S2w //....stub
+	binary+S2w //....ipa
+
+* Best to save as a text file (.txt only) then import it: `p4 typemap -i < my_typemap.txt`
+* To print and confirm it type `p4 typemap -o`
+
 
 ### DAM
 * To limit DAM users from creating projects or repositories go to **Teams** dashboard and click on the user proflie on thg etop right.  Click on **Company settings**.  Go to **Features** and adjust the settings to limit projects.
