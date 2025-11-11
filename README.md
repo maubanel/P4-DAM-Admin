@@ -95,7 +95,8 @@ Performs a copy and submit in one command when creating new streams.
 `clients -a -S //DeportName/Stream`
 
 ### Current P4 Typemap
-```# Perforce File Type Mapping Specifications.
+```
+# Perforce File Type Mapping Specifications.
 #
 #  TypeMap:	a list of filetype mappings; one per line.
 #		Each line has two elements:
@@ -201,7 +202,8 @@ TypeMap:
 	binary+S2w //....app
 	binary+S2w //....dylib
 	binary+S2w //....stub
-	binary+S2w //....ipa```
+	binary+S2w //....ipa
+```
 
 * Best to save as a text file (.txt only) then import it: `p4 typemap -i < my_typemap.txt`
 * To print and confirm it type `p4 typemap -o`
