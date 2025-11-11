@@ -207,6 +207,26 @@ TypeMap:
 
 * Best to save as a text file (.txt only) then import it: `p4 typemap -i < my_typemap.txt`
 * To print and confirm it type `p4 typemap -o`
+* Bash Script to retype all files (make sure they are all commiteed)
+  ```
+  #!/bin/bash
+
+DEPOT="//depotName/..."
+
+while read type pattern; do
+  # Skip empty lines, comments, and TypeMap header
+  [[ "$type" =~ ^#.*$ ]] && continue
+  [[ -z "$type" ]] && continue
+  [[ "$type" == "TypeMap:" ]] && continue
+
+  # Extract extension from pattern: //....ext → ext
+  ext="${pattern##*....}"
+
+  echo "Retyping *.$ext as $type"
+  p4 retype -t "$type" "$DEPOT/.../*.$ext"
+done < UnrealTypemap.txt
+
+```
 
 
 ### DAM
