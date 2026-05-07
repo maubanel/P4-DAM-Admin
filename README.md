@@ -94,6 +94,11 @@ Performs a copy and submit in one command when creating new streams.
 ### List all clients (Workspaces) on a stream:
 `clients -a -S //DeportName/Stream`
 
+### Delete all existing clients
+p4 clients -S //DepotName/... | awk '{print $2}' | while read c; do
+  p4 client -d -f "$c"
+done
+
 ### Current P4 Typemap
 ```
 # Perforce File Type Mapping Specifications.
