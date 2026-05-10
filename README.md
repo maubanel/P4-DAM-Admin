@@ -100,10 +100,7 @@ p4 clients -S //DepotName/... | awk '{print $2}' | while read c; do
 done
 
 ### List all depots from most recent used to oldest
-`for d in $(p4 depots | awk '{print $2}'); do
-  last=$(p4 changes -m 1 "//$d/..." 2>/dev/null | awk 'NR==1 {print $2, $4, $5}')
-  echo "$last $d"
-done | sort -r`
+`for d in $(p4 depots | awk '{print $2}'); do last=$(p4 changes -m 1 "//$d/..." 2>/dev/null | awk 'NR==1 {print $2, $4, $5}'); echo "$last $d"; done | sort -r`
 
 ### Current P4 Typemap
 ```
