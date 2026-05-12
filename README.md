@@ -102,6 +102,9 @@ done
 ### List all depots from most recent used to oldest
 `for d in $(p4 depots | awk '{print $2}'); do last=$(p4 changes -m 1 "//$d/..." 2>/dev/null | awk 'NR==1 {print $2, $4, $5}'); echo "$last $d"; done | sort -r`
 
+### Reset all permissions on mac set by Perforce
+`chmod -R u+rw .`
+
 ### Current P4 Typemap
 ```
 # Perforce File Type Mapping Specifications.
